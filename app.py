@@ -85,7 +85,8 @@ if __name__ == "__main__":
         st.sidebar.write('Gender : {}'.format(gender))
         st.sidebar.write("Sentence: {}".format(sentence))
         st.sidebar.write("Age : {}".format(age))
-        st.sidebar.write("Accent: {}".format(accent))
+        st.sidebar.write("AcCent: {}".format(accent))
+        plt_type = st.sidebar.radio("Pick a plot", ["Spectrogram", "MFCC"])
 
         X_features = test_feature_df[test_feature_df.file == file].drop('file', axis=1)
         X_scaled = scaler.transform(X_features.values.reshape(1,-1))
@@ -96,8 +97,10 @@ if __name__ == "__main__":
 
         st.write('Predicted Gender : {}'.format(y_labels))
 
-        #plot_spectrogram(st, file)
-        plot_mfcc(st, file)
+        if plt_type == 'Spectrogram':
+            plot_spectrogram(st, file)
+        else:
+            plot_mfcc(st, file)
 
 
 
