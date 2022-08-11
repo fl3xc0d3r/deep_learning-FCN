@@ -9,9 +9,9 @@ from librosa import display
 
 import streamlit as st
 
-model_dir = '../data/model_data'
-test_dir = '../data/valid_test'
-image_dir = '../images'
+model_dir = 'data/model_data'
+test_dir = 'data/valid_test'
+image_dir = 'images'
 
 def plot_spectrogram(st, file, sampling_rate=48000, hop_length=512, n_fft=2048):
     signal,_ = librosa.load(test_dir + '/' + file, sr=sampling_rate)
