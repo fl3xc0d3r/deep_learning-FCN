@@ -1,4 +1,6 @@
 tensorflow
 numpy
 pandas
-keras.preprocessing
+librosa
+matplotlib
+seaborn
