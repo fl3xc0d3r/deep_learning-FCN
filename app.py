@@ -85,7 +85,7 @@ if __name__ == "__main__":
         st.sidebar.write('Gender : {}'.format(gender))
         st.sidebar.write("Sentence: {}".format(sentence))
         st.sidebar.write("Age : {}".format(age))
-        st.sidebar.write("AcCent: {}".format(accent))
+        st.sidebar.write("Accent: {}".format(accent))
         plt_type = st.sidebar.radio("Pick a plot", ["Spectrogram", "MFCC"])
 
         X_features = test_feature_df[test_feature_df.file == file].drop('file', axis=1)
