@@ -75,7 +75,6 @@ if __name__ == "__main__":
         file = files[selection_list.index(selected) - 1]
     if file:
         st.audio(test_dir + '/' + file)
-        st.sidebar.write('You picked : {}'.format(selected))
 
         record = test_df[test_df.file == file]
         gender = record.gender.values[0]
