@@ -6,6 +6,7 @@ import librosa
 import sounddevice as sd
 from scipy.io.wavfile import write
 from matplotlib import pyplot as plt
+from librosa import display
 
 import streamlit as st
 
