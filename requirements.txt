@@ -8,3 +8,4 @@ matplotlib
 seaborn
 sounddevice
 scipy
+pyaudio
